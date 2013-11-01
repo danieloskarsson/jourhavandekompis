@@ -22,9 +22,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		getWindow().requestFeature(Window.FEATURE_PROGRESS);
-		setContentView(R.layout.activity_main);
-
-		webView = (WebView) findViewById(R.id.webView);
+		webView = new WebView(this);
+		setContentView(webView);
 
 		webView.getSettings().setJavaScriptEnabled(true);
 		webView.getSettings().setBuiltInZoomControls(true);
